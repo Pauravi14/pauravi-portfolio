@@ -1,4 +1,6 @@
 (() => {
+  document.documentElement.classList.add("js-anim");
+
   const header = document.querySelector("[data-header]");
   const nav = document.querySelector("[data-nav]");
   const toggle = document.querySelector("[data-nav-toggle]");

@@ -540,12 +540,18 @@ p {
 
 /* Reveal motion */
 [data-reveal] {
+  /* Visible by default so content isn't blank if JS/CSS cache fails */
+  opacity: 1;
+  transform: none;
+}
+
+html.js-anim [data-reveal]:not(.is-in) {
   opacity: 0;
   transform: translateY(1.25rem);
   transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
 }
 
-[data-reveal].is-in {
+html.js-anim [data-reveal].is-in {
   opacity: 1;
   transform: none;
 }
