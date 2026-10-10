@@ -1,6 +1,6 @@
 # Pauravi Pardeshi — Portfolio
 
-Personal portfolio site based on my CV: experience, projects, skills, and a bit about me.
+Recruiter-focused portfolio built from my public GitHub projects: live demos, stacks, and short explanations per repo.
 
 ## Open locally
 

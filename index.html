@@ -6,7 +6,7 @@
     <title>Pauravi Pardeshi — Portfolio</title>
     <meta
       name="description"
-      content="Pauravi Pardeshi — M.Sc. Computer Engineering (Embedded Systems) at Paderborn University. Software, IT, web/mobile, AI, and VR."
+      content="Pauravi Pardeshi — portfolio of shipped projects: React Native mobile apps, Unity VR security on Meta Quest, Next.js demos, and client websites. Skills, live demos, and code."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,10 +14,10 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Sora:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=20260815b" />
+    <link rel="stylesheet" href="css/styles.css?v=20261010b" />
   </head>
   <body>
-    <!-- deploy: 20260815b — hero without PraxisCheck; projects still list PraxisCheck -->
+    <!-- deploy: 20261010b — screenshots + Pages deploy -->
     <a class="skip-link" href="#main">Skip to content</a>
 
     <header class="site-header" data-header>
@@ -27,8 +27,9 @@
         <span></span><span></span>
       </button>
       <nav id="site-nav" class="site-nav" data-nav>
-        <a href="#work">Work</a>
+        <a href="#snapshot">Overview</a>
         <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
       </nav>
@@ -48,16 +49,273 @@
         <div class="hero-copy">
           <p class="hero-brand" data-reveal>Pauravi Pardeshi</p>
           <h1 class="hero-title" data-reveal>
-            Building software, mobile apps, AI, and VR that feel clear.
+            Projects that show what I can build — mobile, VR security, and web.
           </h1>
           <p class="hero-lead" data-reveal>
-            M.Sc. Computer Engineering student at Paderborn University (Embedded Systems).
-            Student Assistant building AI-supported VR learning software alongside
-            software, mobile, and IT work.
+            M.Sc. Computer Engineering (Embedded Systems), Paderborn University.
+            This portfolio is built from my public GitHub work: live demos where possible,
+            clear stacks, and the problems each project solves — so you can skim like a recruiter
+            and still see depth.
           </p>
           <div class="hero-actions" data-reveal>
-            <a class="btn btn-primary" href="#projects">See selected work</a>
-            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+            <a class="btn btn-primary" href="#projects">Browse projects</a>
+            <a class="btn btn-ghost" href="https://github.com/Pauravi14" target="_blank" rel="noopener noreferrer">GitHub</a>
+          </div>
+        </div>
+      </section>
+
+      <section id="snapshot" class="section snapshot">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">60-second read</p>
+          <h2>What my GitHub repos say about me</h2>
+          <p class="section-lead">
+            Seven public repositories — from a deployable Android health-finder app to a Meta Quest
+            VR security sandbox and production client sites. Below is the same story a recruiter gets
+            after skimming code, READMEs, and live links.
+          </p>
+        </div>
+        <ul class="snapshot-grid" data-reveal>
+          <li>
+            <strong>Mobile product</strong>
+            <span>Maps, i18n (EN/DE), theming, EAS Android builds — PraxisCheck.</span>
+          </li>
+          <li>
+            <strong>VR &amp; security</strong>
+            <span>Unity 6 Quest app with adaptive auth (QR, PIN, Head Rev) + public risk-scoring demo.</span>
+          </li>
+          <li>
+            <strong>Client web</strong>
+            <span>Static German business sites with Python generators, legal pages, and live hosting.</span>
+          </li>
+          <li>
+            <strong>Freelance / product UI</strong>
+            <span>Service sites with pricing, samples, and responsive layout — Adored Us.</span>
+          </li>
+        </ul>
+        <div class="chip-row" data-reveal aria-label="Technologies across projects">
+          <span class="chip">TypeScript</span>
+          <span class="chip">React Native · Expo</span>
+          <span class="chip">Next.js · React</span>
+          <span class="chip">C# · Unity 6</span>
+          <span class="chip">Meta Quest · OpenXR</span>
+          <span class="chip">Python</span>
+          <span class="chip">HTML · CSS · JavaScript</span>
+          <span class="chip">Git · GitHub Pages · Vercel</span>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">GitHub portfolio</p>
+          <h2>Every project, explained</h2>
+          <p class="section-lead">
+            Each card matches a repo under
+            <a href="https://github.com/Pauravi14" target="_blank" rel="noopener noreferrer">github.com/Pauravi14</a>.
+            Open a live demo when available, or the repo for Quest / APK work.
+          </p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card" data-reveal id="project-praxischeck">
+            <figure class="project-thumb">
+              <img src="assets/projects/praxischeck.svg" alt="PraxisCheck Paderborn app concept" width="1200" height="675" loading="lazy" decoding="async" />
+            </figure>
+            <header class="project-card-head">
+              <p class="project-tag">Mobile · Product</p>
+              <h3>PraxisCheck Paderborn</h3>
+              <p class="project-role">Solo build — GP &amp; specialist finder for Paderborn</p>
+            </header>
+            <p class="project-summary">
+              Helps residents find practices by category (GP, dentist, hospital, emergency, and more),
+              see community-updated availability (accepting / waitlist / full), and act quickly —
+              call, open the website, or navigate. Built for real daily use with English and German UI.
+            </p>
+            <ul class="project-highlights">
+              <li>List + map (OpenStreetMap) with hospital/emergency contacts</li>
+              <li>Light / dark / system theme, Source Sans 3, category filters</li>
+              <li>Android APK pipeline via Expo Application Services (EAS)</li>
+            </ul>
+            <dl class="project-stack">
+              <div><dt>Stack</dt><dd>Expo 57, React Native, TypeScript, React Navigation, i18n-js, AsyncStorage</dd></div>
+              <div><dt>Signals</dt><dd>Mobile UX, localization, offline-friendly v1 data on device, ship-to-device</dd></div>
+            </dl>
+            <div class="project-links">
+              <a class="link-pill link-pill--primary" href="https://github.com/Pauravi14/PraxisCheck" target="_blank" rel="noopener noreferrer">Source code</a>
+            </div>
+          </article>
+
+          <article class="project-card project-card--featured" data-reveal id="project-ada-vr">
+            <figure class="project-thumb">
+              <img src="assets/projects/ada-vr-sandbox.svg" alt="ADA-VR Meta Quest sandbox" width="1200" height="675" loading="lazy" decoding="async" />
+            </figure>
+            <header class="project-card-head">
+              <p class="project-tag">Unity · Meta Quest · Security</p>
+              <h3>ADA-VR Sandbox Game</h3>
+              <p class="project-role">University research software — adaptive authentication in VR</p>
+            </header>
+            <p class="project-summary">
+              Self-contained Unity VR sandbox for the ADA-VR framework at Paderborn: three authenticators
+              on Quest (QR-Quest, randomized PIN, Head Reverberated), plus Bluetooth/context sensing and
+              the MAPE-K analyzer–planner–executor loop. Packages are vendored so the repo clones and opens cleanly.
+            </p>
+            <ul class="project-highlights">
+              <li>Unity 6000.3, Meta XR / OpenXR, XR Interaction Toolkit</li>
+              <li>Integrated Head Rev team APK workflow and Quest UI bootstrap</li>
+              <li>Mirror of active development branch <code>whole-sandbox-project</code></li>
+            </ul>
+            <dl class="project-stack">
+              <div><dt>Stack</dt><dd>C#, Unity 6, Meta Quest (Android), OpenXR, custom ADA-VR packages</dd></div>
+              <div><dt>Signals</dt><dd>Immersive UX, security engineering, large multi-package Unity architecture</dd></div>
+            </dl>
+            <div class="project-links">
+              <a class="link-pill link-pill--primary" href="https://github.com/Pauravi14/ada-vr-sandbox-game" target="_blank" rel="noopener noreferrer">Source code</a>
+              <a class="link-pill" href="https://ai-vr-security-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Related live demo</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal id="project-ai-vr-demo">
+            <figure class="project-thumb">
+              <img src="assets/projects/ai-vr-security-assistant.png" alt="AI VR Security Assistant live demo" width="1200" height="675" loading="lazy" decoding="async" />
+            </figure>
+            <header class="project-card-head">
+              <p class="project-tag">Next.js · TypeScript · Live demo</p>
+              <h3>AI VR Security Assistant</h3>
+              <p class="project-role">Public portfolio slice of ADA-VR ideas</p>
+            </header>
+            <p class="project-summary">
+              Interactive demo of context-based risk scoring for long-lived VR sessions: change inputs
+              (Bluetooth phone trust, network type, login time, minutes since auth) and watch risk level,
+              human-readable explanation, and recommended action update instantly — not a black box.
+            </p>
+            <ul class="project-highlights">
+              <li>Threshold model: Low → Critical with mapped security actions</li>
+              <li>Recruiter-friendly explanation of adaptive authentication</li>
+              <li>Independent from private university code; safe to share</li>
+            </ul>
+            <dl class="project-stack">
+              <div><dt>Stack</dt><dd>Next.js (App Router), React, TypeScript, Tailwind CSS</dd></div>
+              <div><dt>Signals</dt><dd>Security UX, explainable rules, polished deploy on Vercel</dd></div>
+            </dl>
+            <div class="project-links">
+              <a class="link-pill link-pill--primary" href="https://ai-vr-security-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Live demo</a>
+              <a class="link-pill" href="https://github.com/Pauravi14/ai-vr-security-assistant" target="_blank" rel="noopener noreferrer">Source code</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal id="project-sesa">
+            <figure class="project-thumb">
+              <img src="assets/projects/sesa-website.png" alt="SESA KFZ Sachverständigenbüro website" width="1200" height="675" loading="lazy" decoding="async" />
+            </figure>
+            <header class="project-card-head">
+              <p class="project-tag">Client site · German · Production</p>
+              <h3>SESA KFZ-Sachverständigenbüro</h3>
+              <p class="project-role">Official static website for an automotive expert practice</p>
+            </header>
+            <p class="project-summary">
+              Professional German-language site for a Kfz-Sachverständigenbüro: services, contact,
+              and legally careful Impressum/Datenschutz content. Generated from maintainable sources
+              with a Python build script — suited to a real business, not a generic template.
+            </p>
+            <ul class="project-highlights">
+              <li>Brand-aligned layout, logo pipeline, GitHub Pages deployment</li>
+              <li>Content and legal notes documented for handover</li>
+              <li>Paired with production hosting on the client domain</li>
+            </ul>
+            <dl class="project-stack">
+              <div><dt>Stack</dt><dd>Python (<code>build_site.py</code>), semantic HTML, CSS, static hosting</dd></div>
+              <div><dt>Signals</dt><dd>Client delivery, DE market, compliance-aware copy structure</dd></div>
+            </dl>
+            <div class="project-links">
+              <a class="link-pill link-pill--primary" href="https://www.sesa-svb.de/" target="_blank" rel="noopener noreferrer">Live (production)</a>
+              <a class="link-pill" href="https://pauravi14.github.io/sesa-website/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>
+              <a class="link-pill" href="https://github.com/Pauravi14/sesa-website" target="_blank" rel="noopener noreferrer">Source code</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal id="project-kfz-demo">
+            <figure class="project-thumb">
+              <img src="assets/projects/kfz-expert-website-demo.png" alt="KFZ expert website layout demo" width="1200" height="675" loading="lazy" decoding="async" />
+            </figure>
+            <header class="project-card-head">
+              <p class="project-tag">Web design · Portfolio demo</p>
+              <h3>KFZ Expert Website (layout demo)</h3>
+              <p class="project-role">Sanitized NORDEX demo — same structure as production client work</p>
+            </header>
+            <p class="project-summary">
+              Responsive marketing site pattern for German automotive experts: hero, services grid,
+              about, and contact flows. This repo is a fictional-brand demo so recruiters can browse
+              structure and code; the live client site runs on a custom domain.
+            </p>
+            <ul class="project-highlights">
+              <li>Custom CSS, responsive header, hero slider (vanilla JS)</li>
+              <li>Multi-page services section with detail templates</li>
+              <li>Python helper to rebuild demo assets locally</li>
+            </ul>
+            <dl class="project-stack">
+              <div><dt>Stack</dt><dd>HTML, CSS, JavaScript, Python build script</dd></div>
+              <div><dt>Signals</dt><dd>Visual design, information architecture, static site craft</dd></div>
+            </dl>
+            <div class="project-links">
+              <a class="link-pill link-pill--primary" href="https://pauravi14.github.io/kfz-expert-website-demo/" target="_blank" rel="noopener noreferrer">Layout demo</a>
+              <a class="link-pill" href="https://www.sesa-svb.de/" target="_blank" rel="noopener noreferrer">Production reference</a>
+              <a class="link-pill" href="https://github.com/Pauravi14/kfz-expert-website-demo" target="_blank" rel="noopener noreferrer">Source code</a>
+            </div>
+          </article>
+
+          <article class="project-card" data-reveal id="project-adored">
+            <figure class="project-thumb">
+              <img src="assets/projects/adored-us.svg" alt="Adored Us freelance services site" width="1200" height="675" loading="lazy" decoding="async" />
+            </figure>
+            <header class="project-card-head">
+              <p class="project-tag">Freelance · Services site</p>
+              <h3>Adored Us</h3>
+              <p class="project-role">Websites, logos &amp; business setup for small businesses</p>
+            </header>
+            <p class="project-summary">
+              Marketing site for freelance offerings: websites, logo design, Google Workspace, and
+              Google Business Profile setup — with clear pricing tiers, service copy, and a samples page.
+              Shows product thinking for non-technical clients.
+            </p>
+            <ul class="project-highlights">
+              <li>Rate cards and scoped deliverables (revisions, page counts)</li>
+              <li>Responsive layout and custom brand typography</li>
+              <li>Static site — easy to host anywhere</li>
+            </ul>
+            <dl class="project-stack">
+              <div><dt>Stack</dt><dd>HTML, CSS, JavaScript</dd></div>
+              <div><dt>Signals</dt><dd>Client communication, pricing UX, brand-forward UI</dd></div>
+            </dl>
+            <div class="project-links">
+              <a class="link-pill link-pill--primary" href="https://pauravi14.github.io/adored/" target="_blank" rel="noopener noreferrer">Live site</a>
+              <a class="link-pill" href="https://github.com/Pauravi14/adored" target="_blank" rel="noopener noreferrer">Source code</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills" id="skills">
+        <div class="section-head" data-reveal>
+          <p class="eyebrow">Skills map</p>
+          <h2>Technologies — tied to real repos</h2>
+        </div>
+        <div class="skill-map" data-reveal>
+          <div class="skill-map-block">
+            <h3>Languages</h3>
+            <p>TypeScript, JavaScript, C#, Python, HTML/CSS — used across mobile, Unity, web demos, and static generators.</p>
+          </div>
+          <div class="skill-map-block">
+            <h3>Mobile</h3>
+            <p><strong>PraxisCheck:</strong> Expo, React Native, React Navigation, maps, i18n, EAS Android builds.</p>
+          </div>
+          <div class="skill-map-block">
+            <h3>VR &amp; security</h3>
+            <p><strong>ADA-VR sandbox:</strong> Unity 6, Quest/OpenXR, multi-factor VR auth packages.<br />
+              <strong>AI VR Assistant:</strong> rule-based risk engine + explainable UI in Next.js.</p>
+          </div>
+          <div class="skill-map-block">
+            <h3>Web &amp; delivery</h3>
+            <p><strong>SESA / KFZ / Adored:</strong> semantic HTML, responsive CSS, client-ready content.<br />
+              Deploy: GitHub Pages, Vercel, custom domains; Git workflows.</p>
           </div>
         </div>
       </section>
@@ -65,7 +323,7 @@
       <section id="work" class="section experience">
         <div class="section-head" data-reveal>
           <p class="eyebrow">Experience</p>
-          <h2>Where I’ve been building</h2>
+          <h2>Where this work comes from</h2>
         </div>
 
         <ol class="timeline">
@@ -76,9 +334,8 @@
             </div>
             <h3>Research / Student Assistant — AI &amp; VR Learning</h3>
             <p>
-              Contribute to Unity-based VR learning environments (VirtuChemLab /
-              VirtuTutor), support AI-driven feedback concepts, and help with
-              prototyping, testing, and documentation alongside CS and domain experts.
+              Unity VR learning (VirtuChemLab / VirtuTutor), AI feedback concepts, testing, and
+              documentation — complements the ADA-VR security repos.
             </p>
           </li>
           <li class="timeline-item" data-reveal>
@@ -88,9 +345,7 @@
             </div>
             <h3>Student Assistant — GenAI Incubator</h3>
             <p>
-              Supported Generative AI innovation projects from ideation to
-              prototype validation with industrial partners — concept notes,
-              feasibility inputs, and demo-ready documentation.
+              GenAI prototypes with industrial partners — ideation through demo-ready documentation.
             </p>
           </li>
           <li class="timeline-item" data-reveal>
@@ -100,80 +355,10 @@
             </div>
             <h3>IT Service Desk / Dispatch Coordinator</h3>
             <p>
-              Managed high-volume IT requests, escalations, software setup, and
-              user documentation in a fast-paced enterprise support environment.
+              Enterprise IT support, escalations, and user-facing documentation — strong operational baseline.
             </p>
           </li>
         </ol>
-      </section>
-
-      <section id="projects" class="section projects">
-        <div class="section-head" data-reveal>
-          <p class="eyebrow">Selected projects</p>
-          <h2>Things I’ve shipped and shaped</h2>
-        </div>
-
-        <div class="project-list">
-          <article class="project" data-reveal>
-            <p class="project-tag">Expo · React Native · TypeScript · Android APK</p>
-            <h3>PraxisCheck Paderborn</h3>
-            <p>
-              Mobile app to find GPs and specialists in Paderborn — list and map,
-              English/German, status updates, and an Android APK build via EAS.
-              Built with Expo and React Native.
-            </p>
-          </article>
-          <article class="project" data-reveal>
-            <p class="project-tag">Master project · Unity · Python · VR</p>
-            <h3>ADA-VR</h3>
-            <p>
-              Adaptive authentication in Virtual Reality using behavioural
-              biometrics — exploring the balance between security and usability
-              in immersive environments.
-            </p>
-          </article>
-          <article class="project" data-reveal>
-            <p class="project-tag">Team lead · JavaScript · WebRTC</p>
-            <h3>WebRTC Communication App</h3>
-            <p>
-              Real-time browser audio/video communication built for peer-to-peer
-              sessions — focused on reliability and a simple user flow.
-            </p>
-          </article>
-          <article class="project" data-reveal>
-            <p class="project-tag">Team lead · 2nd Prize · Prakalp</p>
-            <h3>Visual Acuity Test System</h3>
-            <p>
-              A low-cost digital vision assessment tool — selected for the CiiA
-              national innovation competition after placing 2nd at Prakalp.
-            </p>
-          </article>
-        </div>
-      </section>
-
-      <section class="section skills" id="skills">
-        <div class="section-head" data-reveal>
-          <p class="eyebrow">Toolkit</p>
-          <h2>Skills I work with</h2>
-        </div>
-        <div class="skill-bands" data-reveal>
-          <div>
-            <h3>Programming</h3>
-            <p>Python, C#, JavaScript/TypeScript, C++, Java, HTML/CSS</p>
-          </div>
-          <div>
-            <h3>Web / Mobile</h3>
-            <p>React Native, Expo, WebRTC, Android APK (EAS), browser apps</p>
-          </div>
-          <div>
-            <h3>AI / VR</h3>
-            <p>Unity, VR prototyping, Generative AI / LLM, RAG-style retrieval, PyTorch basics</p>
-          </div>
-          <div>
-            <h3>Tools &amp; operations</h3>
-            <p>Git, Linux, testing, technical documentation, IT service support</p>
-          </div>
-        </div>
       </section>
 
       <section id="about" class="section about">
@@ -234,6 +419,6 @@
       <p>© <span data-year></span> Pauravi Pardeshi</p>
     </footer>
 
-    <script src="js/main.js?v=20260815b"></script>
+    <script src="js/main.js?v=20261010b"></script>
   </body>
 </html>

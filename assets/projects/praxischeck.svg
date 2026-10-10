@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="PraxisCheck Paderborn">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#0f2744"/>
+      <stop offset="100%" stop-color="#1a3a5c"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#bg)"/>
+  <circle cx="880" cy="220" r="140" fill="none" stroke="#d4a574" stroke-width="3" opacity="0.5"/>
+  <circle cx="880" cy="220" r="8" fill="#d4a574"/>
+  <path d="M320 420 L520 280 L720 360 L920 240" fill="none" stroke="#9a2f45" stroke-width="4" stroke-linecap="round"/>
+  <text x="80" y="120" fill="#f6f1ea" font-family="system-ui,sans-serif" font-size="28" font-weight="600">PraxisCheck Paderborn</text>
+  <text x="80" y="170" fill="#d4a574" font-family="system-ui,sans-serif" font-size="20">Expo · React Native · Maps · EN/DE</text>
+  <text x="80" y="520" fill="#f6f1ea" opacity="0.75" font-family="system-ui,sans-serif" font-size="22">GP &amp; specialist finder · Android APK</text>
+</svg>

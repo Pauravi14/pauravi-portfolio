@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-label="Adored Us">
+  <defs>
+    <linearGradient id="ad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f6f1ea"/>
+      <stop offset="100%" stop-color="#e8e0d4"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="675" fill="url(#ad)"/>
+  <text x="600" y="280" text-anchor="middle" fill="#9a2f45" font-family="Georgia,serif" font-size="72" font-style="italic">Adored Us</text>
+  <text x="600" y="360" text-anchor="middle" fill="#14110f" font-family="system-ui,sans-serif" font-size="24">Websites · Logos · Business setup</text>
+  <text x="600" y="420" text-anchor="middle" fill="#6f1f31" font-family="system-ui,sans-serif" font-size="20">Freelance services · pricing &amp; samples</text>
+</svg>
