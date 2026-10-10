@@ -416,6 +416,57 @@ p {
 .snapshot-grid span {
   color: rgba(246, 241, 234, 0.72);
   font-size: 0.95rem;
+  line-height: 1.55;
+  display: block;
+}
+
+.snapshot-grid span strong {
+  display: inline;
+  color: var(--lamp);
+  font-weight: 500;
+}
+
+.snapshot-section-head,
+.skills-section-head,
+.snapshot-grid,
+.skill-categories {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skill-categories {
+  display: grid;
+  gap: 1rem;
+  margin-top: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .skill-categories {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.15rem;
+  }
+}
+
+.skill-category {
+  padding: 1.15rem 1.25rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: rgba(20, 17, 15, 0.4);
+}
+
+.skill-category h3 {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  color: var(--lamp);
+  margin: 0 0 0.5rem;
+}
+
+.skill-category p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.55;
+  color: rgba(246, 241, 234, 0.78);
 }
 
 .chip-row {
@@ -754,8 +805,17 @@ p {
   max-width: 56rem;
 }
 
+.skill-map--cv {
+  max-width: 72rem;
+  gap: 1.15rem;
+}
+
 @media (min-width: 760px) {
   .skill-map {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .skill-map--cv {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -763,6 +823,18 @@ p {
 .skill-map-block {
   padding: 1.25rem 0;
   border-top: 1px solid var(--line);
+}
+
+.skill-map-block--card {
+  padding: 1.2rem 1.3rem;
+  border: 1px solid var(--line);
+  border-radius: 0.35rem;
+  background: rgba(20, 17, 15, 0.35);
+  border-top: 1px solid var(--line);
+}
+
+.skill-map-block--wide {
+  grid-column: 1 / -1;
 }
 
 .skill-map-block h3 {
@@ -776,6 +848,31 @@ p {
   color: rgba(246, 241, 234, 0.78);
   font-size: 0.95rem;
   line-height: 1.6;
+}
+
+.skill-detail-list {
+  margin: 0;
+  padding-left: 1.15rem;
+  color: rgba(246, 241, 234, 0.78);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+.skill-detail-list li {
+  margin-bottom: 0.35rem;
+}
+
+.skill-detail-list li:last-child {
+  margin-bottom: 0;
+}
+
+.skill-map-inline {
+  margin-bottom: 0.65rem !important;
+}
+
+.skill-map-note {
+  font-size: 0.88rem !important;
+  color: rgba(246, 241, 234, 0.55) !important;
 }
 
 /* About */
