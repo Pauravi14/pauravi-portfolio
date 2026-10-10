@@ -488,6 +488,41 @@ p {
   object-position: top center;
 }
 
+.project-thumb--phone {
+  aspect-ratio: 9 / 16;
+  max-height: min(70vh, 520px);
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 280px;
+  border-bottom: none;
+  background: #0c0a09;
+}
+
+.project-thumb--phone img {
+  object-fit: contain;
+  object-position: top center;
+}
+
+.project-figures--phones {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (min-width: 900px) {
+  .project-figures--phones {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+.project-figures--phones img {
+  object-fit: contain;
+  aspect-ratio: 9 / 19;
+  max-height: 320px;
+  margin: 0 auto;
+  display: block;
+  width: auto;
+  max-width: 100%;
+}
+
 .project-card:hover {
   border-color: rgba(212, 165, 116, 0.35);
   transform: translateY(-2px);

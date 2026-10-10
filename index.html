@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Sora:wght@300;400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/styles.css?v=20261010d" />
+    <link rel="stylesheet" href="css/styles.css?v=20261010e" />
   </head>
   <body>
     <!-- deploy: 20261010b — screenshots + Pages deploy -->
@@ -112,28 +112,47 @@
         </div>
 
         <div class="project-grid">
-          <article class="project-card" data-reveal id="project-praxischeck">
-            <figure class="project-thumb">
-              <img src="assets/projects/praxischeck.svg" alt="PraxisCheck Paderborn app concept" width="1200" height="675" loading="lazy" decoding="async" />
+          <article class="project-card project-card--deep" data-reveal id="project-praxischeck">
+            <figure class="project-thumb project-thumb--phone">
+              <img src="assets/projects/praxischeck/list-search.jpg" alt="PraxisCheck list view with search and slot filters" width="1080" height="2400" loading="lazy" decoding="async" />
             </figure>
             <header class="project-card-head">
-              <p class="project-tag">Mobile · Product</p>
+              <p class="project-tag">Mobile · Product · Expo</p>
               <h3>PraxisCheck Paderborn</h3>
-              <p class="project-role">Solo build — GP &amp; specialist finder for Paderborn</p>
+              <p class="project-role">Solo build — find doctors &amp; open appointments in Paderborn</p>
             </header>
             <p class="project-summary">
-              Helps residents find practices by category (GP, dentist, hospital, emergency, and more),
-              see community-updated availability (accepting / waitlist / full), and act quickly —
-              call, open the website, or navigate. Built for real daily use with English and German UI.
+              React Native app to search hundreds of local practices, filter by English-speaking staff,
+              slots today, or emergency-only, and open a detail view with today’s appointment-style slots,
+              doctors on site, and hours. A dedicated emergency tab surfaces 112 / 116117 and hospital contacts.
+              English and German UI with light, dark, and system themes.
             </p>
             <ul class="project-highlights">
-              <li>List + map (OpenStreetMap) with hospital/emergency contacts</li>
-              <li>Light / dark / system theme, Source Sans 3, category filters</li>
-              <li>Android APK pipeline via Expo Application Services (EAS)</li>
+              <li>List + map (OpenStreetMap), category chips, slot status (open / few / fully booked)</li>
+              <li>Practice detail: next free time, slots today, clinic update time, call-to-confirm flow</li>
+              <li>Android APK via Expo Application Services (EAS)</li>
             </ul>
+            <div class="project-figures project-figures--phones" aria-label="PraxisCheck app screenshots">
+              <figure>
+                <img src="assets/projects/praxischeck/list-search.jpg" alt="Search, filters, and practice list" loading="lazy" decoding="async" />
+                <figcaption>List · search &amp; filters</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/projects/praxischeck/detail-physio.jpg" alt="Physiotherapy practice detail with open slots" loading="lazy" decoding="async" />
+                <figcaption>Detail · open slots</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/projects/praxischeck/detail-gp.jpg" alt="GP practice detail with few slots" loading="lazy" decoding="async" />
+                <figcaption>Detail · few slots</figcaption>
+              </figure>
+              <figure>
+                <img src="assets/projects/praxischeck/emergency.jpg" alt="Emergency numbers and hospitals" loading="lazy" decoding="async" />
+                <figcaption>Emergency tab</figcaption>
+              </figure>
+            </div>
             <dl class="project-stack">
-              <div><dt>Stack</dt><dd>Expo 57, React Native, TypeScript, React Navigation, i18n-js, AsyncStorage</dd></div>
-              <div><dt>Signals</dt><dd>Mobile UX, localization, offline-friendly v1 data on device, ship-to-device</dd></div>
+              <div><dt>Stack</dt><dd>Expo 57, React Native, TypeScript, React Navigation, react-native-maps, i18n-js, AsyncStorage</dd></div>
+              <div><dt>Signals</dt><dd>Mobile product UX, healthcare-adjacent data presentation, localization, ship-to-device</dd></div>
             </dl>
             <div class="project-links">
               <a class="link-pill link-pill--primary" href="https://github.com/Pauravi14/PraxisCheck" target="_blank" rel="noopener noreferrer">Source code</a>
@@ -426,6 +445,6 @@
       <p>© <span data-year></span> Pauravi Pardeshi</p>
     </footer>
 
-    <script src="js/main.js?v=20261010d"></script>
+    <script src="js/main.js?v=20261010e"></script>
   </body>
 </html>
