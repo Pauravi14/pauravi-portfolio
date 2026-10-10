@@ -1185,7 +1185,11 @@ html.js-anim [data-reveal].is-in {
 
 .catalog-card-media {
   margin: 0;
-  aspect-ratio: 16 / 10;
+  flex-shrink: 0;
+  width: 100%;
+  height: 13.75rem;
+  max-height: 13.75rem;
+  overflow: hidden;
   background: #0c0a09;
   border-bottom: 1px solid var(--line);
 }
@@ -1195,15 +1199,17 @@ html.js-anim [data-reveal].is-in {
   height: 100%;
   object-fit: cover;
   object-position: top center;
+  display: block;
 }
 
 .catalog-card-media--phone {
-  aspect-ratio: 9 / 14;
-  max-height: 220px;
+  height: 13.75rem;
+  max-height: 13.75rem;
 }
 
 .catalog-card-media--phone img {
-  object-fit: contain;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .catalog-card-body {
