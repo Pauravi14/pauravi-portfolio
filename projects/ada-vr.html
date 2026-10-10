@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ADA-VR — Pauravi Pardeshi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Sora:wght@300;400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../css/styles.css?v=20261010f" />
+  </head>
+  <body class="page-project">
+    <header class="site-header is-scrolled" data-header>
+      <a class="logo" href="../index.html">← All projects</a>
+      <nav class="site-nav site-nav--minimal" data-nav aria-label="Project">
+        <a href="https://github.com/Pauravi14/ada-vr-sandbox-game" target="_blank" rel="noopener noreferrer">GitHub</a>
+      </nav>
+    </header>
+
+    <main class="project-detail">
+      <article class="project-card project-card--deep project-card--flat project-card--featured">
+        <figure class="project-thumb">
+          <img src="../assets/projects/adavr-report/adavr-architecture.png" alt="ADA-VR system architecture (MAPE-K)" width="827" height="540" loading="lazy" decoding="async" />
+        </figure>
+        <header class="project-card-head project-card-head--top">
+          <p class="project-tag">Paderborn University · IT Security 2025–2026</p>
+          <h1>ADA-VR — Adaptive Authentication in Virtual Reality</h1>
+          <p class="project-role">Modular VR security framework + Quest sandbox prototype</p>
+        </header>
+        <p class="project-summary">
+          ADA-VR is a modular framework for <strong>context-aware authentication in VR</strong>. It separates
+          adaptation logic from sensors and authenticators, implements the <strong>MAPE-K</strong> loop, matches
+          live context to scenarios with <strong>Gower distance</strong>, and ranks mechanisms using
+          <strong>AURA-XR</strong>. A Unity sandbox on <strong>Meta Quest</strong> integrates one context sensor
+          and three authenticators (Head Reverberated, QR Quest, Randomized PIN).
+        </p>
+
+        <aside class="project-contribution" aria-label="My contribution">
+          <h4>What I worked on</h4>
+          <p>
+            <strong>Head Reverberated</strong> and its <strong>integration into the sandbox</strong>: wiring the
+            <code>org.upb.hits.adavr.head-reverberated</code> package into the ADA-VR framework, Quest head-locked
+            HeadAuth UI, enrollment and login sessions, VM training / model download, on-device inference with
+            Unity Sentis, and hand-offs to QR Quest or Randomized PIN when the planner requests fallback.
+          </p>
+        </aside>
+
+        <div class="project-subsection">
+          <h4>Head Reverberated (acoustic biometric)</h4>
+          <p>
+            Ultrasonic chirps (18–22&nbsp;kHz) capture a head- and wear-specific echo inside the HMD; a remote
+            FastAPI training host fits per-user CAE + CNN models, then Quest caches <code>.Sentis</code> weights for
+            offline login. Registration uses multi-cycle enrollment (poses + chirps); authentication runs a short
+            3-chirp majority vote with pose and ambient checks.
+          </p>
+          <ul class="project-highlights">
+            <li>Head-locked HeadAuth popup integrated with ADA-VR registration vs authentication sessions</li>
+            <li>Enroll → train on VM → download ONNX/Sentis → on-headset CNN + prototype scoring</li>
+            <li>Quest 3 sandbox builds and course user-study sessions</li>
+          </ul>
+        </div>
+
+        <div class="project-subsection">
+          <h4>Sandbox integration</h4>
+          <p>
+            Framework discovery registers sensors and authenticators at runtime; the managing system selects a
+            mechanism for the current scenario. All three auth modalities run in one Quest build with Bluetooth/context monitoring.
+          </p>
+          <figure class="project-inline-figure">
+            <img src="../assets/projects/adavr-report/adavr-sandbox.png" alt="ADA-VR sandbox VR application" loading="lazy" decoding="async" />
+            <figcaption>Sandbox application hosting the framework and authenticators.</figcaption>
+          </figure>
+        </div>
+
+        <div class="project-figures" aria-label="Figures from project report">
+          <figure>
+            <img src="../assets/projects/adavr-report/headrev-auth-flow.png" alt="Head Reverberated authentication flow" loading="lazy" decoding="async" />
+            <figcaption>Authentication flow</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/projects/adavr-report/headrev-enrollment-ui.png" alt="Enrollment UI" loading="lazy" decoding="async" />
+            <figcaption>Enrollment &amp; owner approval</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/projects/adavr-report/headrev-enroll-login-overview.png" alt="Enrollment overview" loading="lazy" decoding="async" />
+            <figcaption>Enroll → train → login</figcaption>
+          </figure>
+          <figure>
+            <img src="../assets/projects/adavr-report/headrev-registration-authentication.png" alt="Quest UI" loading="lazy" decoding="async" />
+            <figcaption>Quest registration &amp; auth</figcaption>
+          </figure>
+        </div>
+
+        <div class="project-skills">
+          <h4>Skills &amp; technologies</h4>
+          <ul class="project-skill-list">
+            <li>C# · Unity 6 · Meta Quest 3 · OpenXR · Meta XR Interaction SDK</li>
+            <li>ADA-VR / MAPE-K · modular UPM packages · runtime registration</li>
+            <li>VR UI: head-locked overlays, framework popup flows, Quest input</li>
+            <li>Head Reverberated: ultrasonic capture, CAE/CNN, Unity Sentis, FastAPI integration</li>
+            <li>Adaptive auth: AURA-XR, scenario matching, authenticator fallback</li>
+          </ul>
+        </div>
+
+        <p class="project-report-note">
+          Summary and figures from the ADA-VR project group report (UPB, IT Security 2025–2026).
+        </p>
+
+        <div class="project-links">
+          <a class="link-pill link-pill--primary" href="https://github.com/Pauravi14/ada-vr-sandbox-game" target="_blank" rel="noopener noreferrer">Sandbox source</a>
+          <a class="link-pill" href="https://ai-vr-security-assistant.vercel.app" target="_blank" rel="noopener noreferrer">Risk demo</a>
+        </div>
+      </article>
+    </main>
+
+    <footer class="site-footer"><p>© <span data-year></span> Pauravi Pardeshi</p></footer>
+    <script src="../js/main.js?v=20261010f"></script>
+  </body>
+</html>
